@@ -51,8 +51,8 @@
 					alert("비밀번호를 입력하세요");
 					return;
 				}
-				if(passwordConfirm == "") {
-					alert("비밀번호를 확인하세요");
+				if(password != passwordConfirm) {
+					alert("비밀번호가 일치하지 않습니다.");
 					return;
 				}
 				if(name == "") {
@@ -63,6 +63,22 @@
 					alert("이메일을 입력하세요");
 					return;
 				}
+				
+				$.ajax({
+					type:"post"
+					, url:"/user/signup"
+					, data:{"loginId":id, "password":password, "name":name, "email":email}
+					, success:function(data) {
+						if(data.result == "success") {
+							location.href = "/user/signin/view";
+						} else {
+							alert("회원가입 실패");
+						}
+					}
+					, error:function() {
+						alert("회원가입 에러");
+					}
+				});
 			})
 		});
 	</script>

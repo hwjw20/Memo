@@ -28,7 +28,7 @@ public class UserRestController {
 		int count = userBO.addUser(loginId, password, name, email);
 		
 		Map<String, String> result = new HashMap<>();
-		if(count != 0) {
+		if(count == 1) {
 			result.put("result", "success");
 		} else {
 			result.put("result", "fail");
