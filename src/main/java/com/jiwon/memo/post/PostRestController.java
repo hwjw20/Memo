@@ -1,15 +1,18 @@
 package com.jiwon.memo.post;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jiwon.memo.post.bo.PostBO;
+import com.jiwon.memo.post.model.Post;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -28,9 +31,9 @@ public class PostRestController {
 			, HttpServletRequest request) {
 		
 		// 로그인된 사용자의 user 테이블의 id 컬럼값
-		// 로그인 api에서 처리해놓았던 세션의 userId 값을 가져와서 활용한다.
 		HttpSession session = request.getSession();
 		
+		// 로그인 api에서 처리해놓았던 세션의 userId 값을 가져와서 활용한다.
 		// 세션에는 setAttribute로 getId나 getName과 같이 모든 타입이 저장 가능하다. Object 타입으로 반환하기 때문에.
 		// 그래서 바로 int 로 저장할 수 없고 다운캐스트를 해야 한다.
 		int userId = (Integer)session.getAttribute("userId");

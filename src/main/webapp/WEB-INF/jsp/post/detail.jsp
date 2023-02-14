@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메모 리스트</title>
+<title>메모 보기</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<script
@@ -22,33 +21,27 @@
 	<div id="wrap">
 		<c:import url="/WEB-INF/jsp/include/header.jsp" />
 		<section>
-			<div class="list-box my-4">
-				<h1 class="text-center">메모 리스트</h1>
-				<table class="table text-center mt-4">
-					<thead>
-						<tr>
-							<th>No.</th>
-							<th>제목</th>
-							<th>시간</th>
-						</tr>
-					</thead>							
-					<tbody>
-						<c:forEach var="post" items="${postList }" varStatus="status">
-						<tr>
-							<td>${status.count }</td>
-							<td><a href="/post/detail/view?postId=${post.id }">${post.title }</a></td>
-							<td><fmt:formatDate value="${post.createdAt }" pattern="yyyy-MM-dd HH:mm:ss" /> </td>
-						</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-				<div class="d-flex justify-content-end">
-					<a href="/post/create/view" class="btn btn-primary mr-3">글쓰기</a>
+			<div class="input-box my-5">
+				<h1 class="text-center">메모 보기</h1>
+				<div class="d-flex mt-3">
+					<label class="col-2">제목</label>
+					<input type="text" class="form-control" id="titleInput" value="${post.title }">					
+				</div>
+				<div class="mt-2">
+					<textarea rows="10" class="form-control" id="contentInput">${post.content }</textarea>
+				</div>
+				<div class="d-flex justify-content-between mt-3">
+					<div>
+						<a href="/post/list/view" class="btn btn-info">목록으로</a>
+						<button type="button" class="btn btn-danger ml-2" id="deleteBtn">삭제</button>
+					</div>
+					<button type="button" class="btn btn-primary" id="saveBtn">저장</button>
 				</div>
 			</div>
 		</section>
-		<c:import url="/WEB-INF/jsp/include/footer.jsp" />
+		<c:import url="/WEB-INF/jsp/include/footer.jsp"></c:import>
 	</div>
-
+	
+	
 </body>
 </html>

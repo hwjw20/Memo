@@ -19,6 +19,11 @@ header {
 	margin:auto;
 }
 
+.list-box {
+	width:700px;
+	margin:auto;
+}
+
 footer {
 	height:50px;
 	background-color:#dddddd;
