@@ -1,8 +1,6 @@
-# Memo
+# 📝Memo
 
-메모를 작성하고 저장합니다. 메모에는 사진 저장이 가능하며 저장한 메모의 수정 및 삭제 또한 가능합니다. 
-
-저장한 메모들은 메모 리스트에서 볼 수 있습니다.
+메모를 작성하고 저장합니다. 
 
 ## About the Memo project
 
@@ -11,23 +9,19 @@
 ### The project schedule
 
 개인 프로젝트
-
-작업기간 2023년 2월
+<br>2023년 2월
 
 ### Stacks
 
 ```
 Java Eclipse Spring Boot MyBatis
+
+Javascript HTML CSS
+
+MySQL GitHub Zenhub
 ```
 
-```
-Javascript HTML CSS 
-```
+## 기능 구현
 
-```
-MySQL 
-```
-
-```
-GitHub Zenhub
-```
+* 메모를 작성합니다. 메모에는 사진 첨부가 가능하며 저장한 메모의 수정 및 삭제가 가능합니다.
+* 메모 리스트에서 저장한 메모들을 볼 수 있습니다.
