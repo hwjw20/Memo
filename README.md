@@ -23,9 +23,9 @@ Javascript HTML CSS
 ```
 
 ```
-MySQL AWS-EC2
+MySQL 
 ```
 
 ```
-GitHub, Zenhub
+GitHub
 ```
