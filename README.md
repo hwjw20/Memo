@@ -25,9 +25,12 @@ MySQL GitHub Zenhub
 
 ## 기능 구현
 
+### 주요 기능
+
 * 메모를 작성합니다. 메모에는 사진 첨부가 가능하며 저장한 메모의 수정 및 삭제가 가능합니다.
 * 메모 리스트에서 저장한 메모들을 볼 수 있습니다.
 
 ### 작동 사진
 
-<img src="https://github.com/hwjw20/SNS/assets/121436436/ca4aac2a-a481-4171-b9f4-72f7de90df1b" width="45%"> | <img src="https://github.com/hwjw20/SNS/assets/121436436/0c93adb6-d4f3-4174-b719-d5469609f2d6" width="45%">
+<img src="https://github.com/hwjw20/SNS/assets/121436436/ca4aac2a-a481-4171-b9f4-72f7de90df1b" width="45%"> 
+<img src="https://github.com/hwjw20/SNS/assets/121436436/0c93adb6-d4f3-4174-b719-d5469609f2d6" width="45%">
